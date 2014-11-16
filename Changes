@@ -1,3 +1,19 @@
+0.04 2014-11-16T22:44:21+01:00
+ [Common]
+ - Add readme_from directive to Makefile.PL.
+ - Fix LICENSE file.
+ - Rewrite B<> to C<> in doc for code.
+ - Update LICENSE AND COPYRIGHT section in doc to my standard.
+ - Update Module::Install to 1.14 version.
+
+ [Error::Pure::JSON]
+ - Add tests for err().
+ - Fix error with undef value.
+
+ [Error::Pure::JSON::Advance]
+ - Add tests for err().
+ - Fix error with undef value.
+
 0.03 2013-09-21
  - Add dependency for perl (based on Error::Pure).
  - Rewrite Changes file to CPAN::Changes::SPEC format.

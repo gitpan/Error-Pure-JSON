@@ -6,7 +6,7 @@ SYNOPSIS
      err 'This is a fatal error', 'name', 'value';
 
 SUBROUTINES
-    err(@messages)
+    "err(@messages)"
              Process error in JSON format with messages @messages.
              Output affects $Error::Pure::Output::JSON::PRETTY variable.
 
@@ -93,8 +93,8 @@ AUTHOR
     <http://skim.cz>
 
 LICENSE AND COPYRIGHT
-    BSD license.
+    BSD 2-Clause License
 
 VERSION
-    0.03
+    0.04
 

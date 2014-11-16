@@ -16,7 +16,7 @@ Readonly::Array our @EXPORT_OK => qw(err);
 Readonly::Scalar my $EVAL => 'eval {...}';
 
 # Version.
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 # Ignore die signal.
 $SIG{__DIE__} = 'IGNORE';
@@ -39,7 +39,11 @@ sub err {
 	# Die for eval.
 	} else {
 		my $e = $errors[-1]->{'msg'}->[0];
-		chomp $e;
+		if (! defined $e) {
+			$e = 'undef';
+		} else {
+			chomp $e;
+		}
 		die "$e\n";
 	}
 
@@ -67,7 +71,7 @@ Error::Pure::JSON - Error::Pure module for JSON output.
 
 =over 8
 
-=item B<err(@messages)>
+=item C<err(@messages)>
 
  Process error in JSON format with messages @messages.
  Output affects $Error::Pure::Output::JSON::PRETTY variable.
@@ -177,10 +181,10 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
-BSD license.
+BSD 2-Clause License
 
 =head1 VERSION
 
-0.03
+0.04
 
 =cut
